@@ -14,7 +14,7 @@ def run_bot():
     global client
     asyncio.set_event_loop(loop)
     client = MyClient()
-    loop.run_until_complete(client.start(os.getenv("TOKEN"), reconnect=False))
+    loop.run_until_complete(client.start(os.getenv("TOKEN"), reconnect=True))
 
 @app.route("/")
 def index():
